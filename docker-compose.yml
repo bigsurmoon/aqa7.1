@@ -1,0 +1,12 @@
+version: '4.9'
+services:
+  db:
+    image: postgres:latest
+    ports:
+      - 5432:5432
+    volumes:
+      - ./data:/var/lib/postgresql/data
+    environment:
+      - POSTGRES_DB=app_db
+      - POSTGRES_USER=kaas
+      - POSTGRES_PASSWORD=1911
